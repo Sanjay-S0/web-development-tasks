@@ -1,37 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Todo App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <input type="text" id="input" placeholder="CREATE YOUR TASKS HERE.." />
-    <button id="add" onclick="add()">ADD</button>
-    <ul id="list">
-      <li>
-        <input type="checkbox" />
-        <span class="list">Learn HTML</span>
-        <button class="edit" onclick="editItem(event)">✏️</button>
-        <button class="delete" onclick="ditem(event)">🗑️</button>
+
+  <body
+    class="bg-gray-100 min-h-screen flex flex-col items-center pt-16 font-sans"
+  >
+    <!-- Input Section -->
+    <div class="flex gap-3">
+      <input
+        type="text"
+        id="input"
+        placeholder="CREATE YOUR TASKS HERE.."
+        class="w-80 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+      />
+      <button
+        id="add"
+        onclick="add()"
+        class="bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition"
+      >
+        ADD
+      </button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="list" class="mt-8 w-96 bg-white shadow-lg rounded-lg divide-y">
+      <li class="flex items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-3">
+          <input type="checkbox" class="w-4 h-4" />
+          <span class="list">Learn HTML</span>
+        </div>
+        <div class="flex gap-3">
+          <button class="edit text-blue-500" onclick="editItem(event)">
+            ✏️
+          </button>
+          <button class="delete text-red-500" onclick="ditem(event)">🗑️</button>
+        </div>
       </li>
-      <li>
-        <input type="checkbox" />
-        <span class="list">Learn CSS</span>
-        <button class="edit" onclick="editItem(event)">✏️</button>
-        <button class="delete" onclick="ditem(event)">🗑️</button>
+
+      <li class="flex items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-3">
+          <input type="checkbox" class="w-4 h-4" />
+          <span class="list">Learn CSS</span>
+        </div>
+        <div class="flex gap-3">
+          <button class="edit text-blue-500" onclick="editItem(event)">
+            ✏️
+          </button>
+          <button class="delete text-red-500" onclick="ditem(event)">🗑️</button>
+        </div>
       </li>
-      <li>
-        <input type="checkbox" />
-        <span class="list">Learn JavaScript</span>
-        <button class="edit" onclick="editItem(event)">✏️</button>
-        <button class="delete" onclick="ditem(event)">🗑️</button>
+
+      <li class="flex items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-3">
+          <input type="checkbox" class="w-4 h-4" />
+          <span class="list">Learn JavaScript</span>
+        </div>
+        <div class="flex gap-3">
+          <button class="edit text-blue-500" onclick="editItem(event)">
+            ✏️
+          </button>
+          <button class="delete text-red-500" onclick="ditem(event)">🗑️</button>
+        </div>
       </li>
-      <li>
-        <input type="checkbox" />
-        <span class="list">Practice DSA</span>
-        <button class="edit" onclick="editItem(event)">✏️</button>
-        <button class="delete" onclick="ditem(event)">🗑️</button>
+
+      <li class="flex items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-3">
+          <input type="checkbox" class="w-4 h-4" />
+          <span class="list">Practice DSA</span>
+        </div>
+        <div class="flex gap-3">
+          <button class="edit text-blue-500" onclick="editItem(event)">
+            ✏️
+          </button>
+          <button class="delete text-red-500" onclick="ditem(event)">🗑️</button>
+        </div>
       </li>
     </ul>
 
@@ -40,95 +87,51 @@
       var input = document.getElementById("input");
 
       function add() {
-        if (input.value.trim() === "") return; // Prevent adding empty tasks
+        if (input.value.trim() === "") return;
+
         var listitem = document.createElement("li");
+        listitem.className = "flex items-center justify-between px-4 py-3";
+
         listitem.innerHTML =
-          "<input type='checkbox' />" +
-          " <span class='list'>" +
+          "<div class='flex items-center gap-3'>" +
+          "<input type='checkbox' class='w-4 h-4' />" +
+          "<span class='list'>" +
           input.value.trim() +
           "</span>" +
-          "<button class='edit' onclick='editItem(event)'>✏️</button>" +
-          "<button class='delete' onclick='ditem(event)'>🗑️</button>";
+          "</div>" +
+          "<div class='flex gap-3'>" +
+          "<button class='edit text-blue-500' onclick='editItem(event)'>✏️</button>" +
+          "<button class='delete text-red-500' onclick='ditem(event)'>🗑️</button>" +
+          "</div>";
+
         ul.appendChild(listitem);
         input.value = "";
       }
 
       function ditem(event) {
-        event.target.parentElement.remove();
+        event.target.closest("li").remove();
       }
 
       function editItem(event) {
-        var li = event.target.parentElement;
+        var li = event.target.closest("li");
         var span = li.querySelector(".list");
         var inp = document.createElement("input");
+
         inp.type = "text";
         inp.value = span.textContent;
-        li.replaceChild(inp, span);
+        inp.className =
+          "border px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-blue-400";
+
+        span.replaceWith(inp);
         inp.focus();
 
         inp.onblur = function () {
           var spanNew = document.createElement("span");
           spanNew.className = "list";
           spanNew.textContent = inp.value;
-          li.replaceChild(spanNew, inp);
+          inp.replaceWith(spanNew);
         };
       }
     </script>
-    <style>
-      body {
-        text-align: center;
-        margin-top: 50px;
-        font-family: Arial, sans-serif;
-      }
-      #input {
-        width: 300px;
-        padding: 10px;
-        font-size: 16px;
-      }
-      button {
-        padding: 10px 15px;
-        font-size: 16px;
-        margin-left: 10px;
-        cursor: pointer;
-      }
-      ul {
-        list-style-type: none;
-        padding: 0;
-        margin-top: 20px;
-        border: 1px solid black;
-      }
-      li {
-        padding: 10px;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-right: 60px;
-      }
-      .edit,
-      .delete {
-        margin-left: 10px;
-        cursor: pointer;
-        background: none;
-        border: none;
-        font-size: 18px;
-      }
-      .edit {
-        padding-left: 300px;
-      }
-      #add {
-        background-color: green;
-        color: white;
-        border: none;
-        border-radius: 5px;
-      }
-      .delete {
-        color: white;
-        border: none;
-        border-radius: 5px;
-      }
-    
-      
-    </style>
   </body>
 </html>
