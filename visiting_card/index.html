@@ -1,28 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Visiting Card</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <table>
-      <tr>
-        <td><img src="image/wallpaper.jpg" width="210px" /></td>
-        <td>
-          <h1>Sanjay S</h1>
-          <br />
-          <p><strong>Profession:Web Developer</strong></p>
-          <br />
-          <p><strong>Email:Sanjay@gmail.com</strong></p>
-          <br />
-          <p><strong>Phone:9675468537</strong></p>
-          <br />
-          <p>
-            <strong>Website:</strong><a href="www.sanjay.com">www.sanjay.com</a>
+
+  <body class="flex items-center justify-center h-screen">
+    <div class="border-2 border-black rounded-xl p-6 w-[420px]">
+      <div class="flex items-center gap-5">
+        <!-- Image -->
+        <img
+          src="image/wallpaper.jpg"
+          alt="profile"
+          class="w-28 h-28 object-cover rounded-lg border border-black"
+        />
+
+        <!-- Details -->
+        <div>
+          <h1 class="text-2xl font-bold">Sanjay S</h1>
+
+          <p class="mt-2">
+            <span class="font-semibold">Profession:</span> Web Developer
           </p>
-        </td>
-      </tr>
-    </table>
+
+          <p><span class="font-semibold">Email:</span> Sanjay@gmail.com</p>
+
+          <p><span class="font-semibold">Phone:</span> 9675468537</p>
+
+          <p>
+            <span class="font-semibold">Website:</span>
+            <a href="#" class="underline">www.sanjay.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -2,20 +2,24 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './Navbar'
 import Hero from './Hero'
-import Social from './Social'
+import About from './About'
+import Skills from './Skills'
 import Projects from './Projects'
 import Contact from './Contact'
 import Footer from './Footer'
 
+
 function App() {
   return (
     <>
-      <Navbar /> 
+      <Navbar />
       <Hero />
-      <Social />
+      <About />
+      <Skills />
       <Projects />
       <Contact />
       <Footer />
+      
   </>
   )
 }

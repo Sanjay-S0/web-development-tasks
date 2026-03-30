@@ -1,42 +1,103 @@
-import React from 'react'
-import img1 from './assets/img1.jpeg'
-import img2 from './assets/img2.webp'
-import img3 from './assets/img3.avif'
+import React from "react";
+
+import visitImg from "./assets/visitingcard.png";
+import contactImg from "./assets/contactform.png";
+import calendarImg from "./assets/calendar.png";
+import galleryImg from "./assets/gallery.png";
+import todoImg from "./assets/todo.png";
+import tictacImg from "./assets/tictactoe.png";
+import calcImg from "./assets/calculator.png";
 
 export default function Projects() {
   return (
-    <section className="flex flex-col md:flex-row bg-gray-700  px-10 justify-between text-white py-6 cursor-pointer" id='projects'>
-        <div className="md:w-1/2 py-25 px-10">
-            <h1 className="text-5xl text-center py-10 text-white">What Can  Do For <br/>Your Needs</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis totam reiciendis ipsam obcaecati cupiditate. Debitis obcaecati, nesciunt similique, repellendus itaque provident accusamus voluptate iste quo, illum dolorum nulla asperiores? Placeat.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iste saepe inventore, quos, soluta assumenda voluptatem voluptate repellendus molestiae, ipsa nam sit quae doloremque neque ullam qui dolorem id veniam!</p>
-        </div>
-        <div className="py-10 md:w-1/2 shadow-lg bg-gray-500 rounded-lg px-10">
-            <div className="flex-col justify-left space-y-6 shadow-lg bg-gray-850">
-              <p className="text-4xl">Projects</p>
-            <div className="flex flex-col md:flex-row space-x-2 shadow-lg bg-gray-900 rounded-lg pl-4">
-            <img src={img1} alt="projectimage" className="rounded-lg h-[150px] w-[230px]" />
-            <p className="text-2xl">UI/UX Design<br/><p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nam esse animi, eos cum sed consectetur corporis pariatur exercitationem fugiat assumenda dolorem aut unde. Error quam ipsa ullam eveniet voluptates.</p>
-            </p>
-            </div>
-            <div className="flex flex-col md:flex-row space-x-2 shadow-lg bg-gray-900 rounded-lg pl-4">
-            <img src={img2} alt="projectimage" className=" rounded-lg h-[150px] w-[230px]" />
-            <p className="text-2xl">Front End Web Develop<br/><p className="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi excepturi nostrum ad cum consectetur sapiente sequi dolorem libero ipsa temporibus odit iusto, blanditiis voluptatibus consequuntur est eum molestias, obcaecati consequatur!</p>
-              </p>
-            </div>
-            <div className="flex flex-col md:flex-row space-x-2 shadow-lg bg-gray-900 rounded-lg pl-4">
-            <img src={img3} alt="projectimage" className="
-            \ rounded-lg h-[150px]  w-[230px]" />
-            <p className="text-2xl">Mobile App Develop<br/><p className="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati nulla reprehenderit mollitia impedit quibusdam facere minus adipisci. Impedit doloremque commodi eos unde autem. Accusamus modi, eum ipsa porro commodi distinctio.</p>
-            </p>
-            </div>
+    <section className="bg-gray-900 min-h-screen py-10 px-4 sm:px-6 text-white" id="projects">
 
+      {/* Heading */}
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-indigo-500 mb-10">
+        Projects
+      </h1>
 
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+        {/* Visiting Card */}
+        <div className="relative group rounded-2xl overflow-hidden shadow-lg transition hover:shadow-purple-500/40">
+          <img src={visitImg} className="w-full h-52 sm:h-60 md:h-64 object-cover transition duration-500 group-hover:opacity-0 group-hover:scale-110" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 via-black to-gray-900 opacity-0 group-hover:opacity-100 transition">
+            <h2 className="text-lg sm:text-xl font-bold mb-3">Visiting Card</h2>
+            <a href="https://visitingcardtask.netlify.app/" target="_blank" className="bg-purple-800 px-4 py-2 rounded-full hover:bg-purple-600 text-sm">
+              View
+            </a>
+          </div>
         </div>
+
+        {/* Contact Form */}
+        <div className="relative group rounded-2xl overflow-hidden shadow-lg transition hover:shadow-purple-500/40">
+          <img src={contactImg} className="w-full h-52 sm:h-60 md:h-64 object-cover transition duration-500 group-hover:opacity-0 group-hover:scale-110" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 via-black to-gray-900 opacity-0 group-hover:opacity-100 transition">
+            <h2 className="text-lg sm:text-xl font-bold mb-3">Contact Form</h2>
+            <a href="https://contactformtask01.netlify.app/" target="_blank" className="bg-purple-800 px-4 py-2 rounded-full hover:bg-purple-600 text-sm">
+              View
+            </a>
+          </div>
+        </div>
+
+        {/* Calendar */}
+        <div className="relative group rounded-2xl overflow-hidden shadow-lg transition hover:shadow-purple-500/40">
+          <img src={calendarImg} className="w-full h-52 sm:h-60 md:h-64 object-cover transition duration-500 group-hover:opacity-0 group-hover:scale-110" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 via-black to-gray-900 opacity-0 group-hover:opacity-100 transition">
+            <h2 className="text-lg sm:text-xl font-bold mb-3">Calendar</h2>
+            <a href="https://calendartask01.netlify.app/" target="_blank" className="bg-purple-800 px-4 py-2 rounded-full hover:bg-purple-600 text-sm">
+              View
+            </a>
+          </div>
+        </div>
+
+        {/* Photo Gallery */}
+        <div className="relative group rounded-2xl overflow-hidden shadow-lg transition hover:shadow-purple-500/40">
+          <img src={galleryImg} className="w-full h-52 sm:h-60 md:h-64 object-cover transition duration-500 group-hover:opacity-0 group-hover:scale-110" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 via-black to-gray-900 opacity-0 group-hover:opacity-100 transition">
+            <h2 className="text-lg sm:text-xl font-bold mb-3">Photo Gallery</h2>
+            <a href="https://photogallerytask.netlify.app/" target="_blank" className="bg-purple-800 px-4 py-2 rounded-full hover:bg-purple-600 text-sm">
+              View
+            </a>
+          </div>
+        </div>
+
+        {/* To Do List */}
+        <div className="relative group rounded-2xl overflow-hidden shadow-lg transition hover:shadow-purple-500/40">
+          <img src={todoImg} className="w-full h-52 sm:h-60 md:h-64 object-cover transition duration-500 group-hover:opacity-0 group-hover:scale-110" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 via-black to-gray-900 opacity-0 group-hover:opacity-100 transition">
+            <h2 className="text-lg sm:text-xl font-bold mb-3">To Do List</h2>
+            <a href="https://todolisttask02.netlify.app/" target="_blank" className="bg-purple-800 px-4 py-2 rounded-full hover:bg-purple-600 text-sm">
+              View
+            </a>
+          </div>
+        </div>
+
+        {/* Tic Tac Toe */}
+        <div className="relative group rounded-2xl overflow-hidden shadow-lg transition hover:shadow-purple-500/40">
+          <img src={tictacImg} className="w-full h-52 sm:h-60 md:h-64 object-cover transition duration-500 group-hover:opacity-0 group-hover:scale-110" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 via-black to-gray-900 opacity-0 group-hover:opacity-100 transition">
+            <h2 className="text-lg sm:text-xl font-bold mb-3">Tic Tac Toe</h2>
+            <a href="https://tictactoetask04.netlify.app/" target="_blank" className="bg-purple-800 px-4 py-2 rounded-full hover:bg-purple-600 text-sm">
+              View
+            </a>
+          </div>
+        </div>
+
+        {/* Calculator (FIXED ✅ inside grid) */}
+        <div className="relative group rounded-2xl overflow-hidden shadow-lg transition hover:shadow-purple-500/40">
+          <img src={calcImg} className="w-full h-52 sm:h-60 md:h-64 object-cover transition duration-500 group-hover:opacity-0 group-hover:scale-110" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 via-black to-gray-900 opacity-0 group-hover:opacity-100 transition">
+            <h2 className="text-lg sm:text-xl font-bold mb-3">Calculator</h2>
+            <a href="https://calculatortask02.netlify.app/" target="_blank" className="bg-purple-800 px-4 py-2 rounded-full hover:bg-purple-600 text-sm">
+              View
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
-
-
-    
-  )
+  );
 }
