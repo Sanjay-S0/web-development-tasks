@@ -14,7 +14,7 @@ export default function Livingplants() {
         `}
       </style>
 
-      <section className="w-full bg-[#f7f7f5] px-4 sm:px-6 md:px-20 py-8 md:py-10 overflow-hidden">
+      <section className="w-full bg-[#f7f7f5] px-4 sm:px-6 md:px-20 py-8 md:py-10 overflow-hidden md:top-20" id="blog">
         {/* Heading */}
             <h1
               className="text-[28px] sm:text-[40px] md:text-[60px] leading-[1.1] md:leading-[1] text-[#0b2e26] tracking-tight font-medium md:hidden text-center"

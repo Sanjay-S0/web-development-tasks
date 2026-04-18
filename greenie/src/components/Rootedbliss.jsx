@@ -17,7 +17,7 @@ export default function RootedBlissSection() {
         `}
       </style>
 
-      <section className="w-full bg-[#f7f7f5] px-4 md:px-8 py-14 md:py-20">
+      <section className="w-full bg-[#f7f7f5] px-4 md:px-8 py-14 md:py-20" id="sale">
         <div className="max-w-[1800px] mx-auto">
           
           {/* TOP */}
@@ -56,7 +56,7 @@ export default function RootedBlissSection() {
               />
 
               {/* Grow Now */}
-              <div className="
+              <a href="#shop" className="
                 absolute 
                 top-30 right-70 
                 md:top-[200px] md:right-[390px]
@@ -66,7 +66,7 @@ export default function RootedBlissSection() {
                 rounded-full flex items-center justify-center text-[10px] sm:text-[14px] md:text-[18px] text-center leading-tight shadow-lg
               ">
                 Grow <br /> Now
-              </div>
+              </a>
 
               {/* Heart */}
               <div className="

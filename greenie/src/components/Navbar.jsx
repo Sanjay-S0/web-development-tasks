@@ -17,22 +17,27 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-10 text-white text-sm font-medium">
-          <li className="flex items-center gap-1 cursor-pointer hover:text-[#c8e96d] transition">
-            Plants
-            <Icon icon="mdi:chevron-down" width="18" height="18" />
-          </li>
-          <li className="cursor-pointer hover:text-[#c8e96d] transition">
-            Shop
-          </li>
-          <li className="cursor-pointer hover:text-[#c8e96d] transition">
-            Videos
-          </li>
-          <li className="cursor-pointer hover:text-[#c8e96d] transition">
-            Sale
-          </li>
-          <li className="cursor-pointer hover:text-[#c8e96d] transition">
-            Blog
-          </li>
+           <a href="#">
+            <li className="cursor-pointer hover:text-[#c8e96d] transition">
+              Home
+            </li>
+          </a>
+          <a href="#shop">
+            <li className="cursor-pointer hover:text-[#c8e96d] transition">
+              Shop
+            </li>
+          </a>
+         
+          <a href="#sale">
+            <li className="cursor-pointer hover:text-[#c8e96d] transition">
+              Sale
+            </li>
+          </a>
+          <a href="#blog">
+            <li className="cursor-pointer hover:text-[#c8e96d] transition">
+              Blog
+            </li>
+          </a>
         </ul>
 
         {/* Right Side */}
@@ -54,9 +59,9 @@ export default function Navbar() {
           </div>
 
           {/* Contact Button */}
-          <button className="hidden sm:block bg-[#b9e45d] text-[#0a3f34] font-medium text-sm px-5 lg:px-8 py-2 lg:py-3 rounded-full hover:scale-105 transition duration-300 shadow-md">
+          <a href="#footer" className="hidden sm:block bg-[#b9e45d] text-[#0a3f34] font-medium text-sm px-5 lg:px-8 py-2 lg:py-3 rounded-full hover:scale-105 transition duration-300 shadow-md">
             Contact
-          </button>
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -70,22 +75,37 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-[#0a5a4a] px-6 pb-6">
+        <div  onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden bg-[#0a5a4a] px-6 pb-6">
           <ul className="flex flex-col gap-5 text-white text-sm font-medium mt-4">
-            <li className="flex items-center gap-1">
-              Plants
-              <Icon icon="mdi:chevron-down" width="18" height="18" />
-            </li>
-            <li>Shop</li>
-            <li>Videos</li>
-            <li>Sale</li>
-            <li>Blog</li>
+            <a href="#">
+              <li className="cursor-pointer hover:text-[#c8e96d] transition">
+                Home
+              </li>
+            </a>
+            <a href="#shop">
+              <li className="cursor-pointer hover:text-[#c8e96d] transition">
+                Shop
+              </li>
+            </a>
+            
+            <a href="#sale">
+              <li className="cursor-pointer hover:text-[#c8e96d] transition">
+                Sale
+              </li>
+            </a>
+            <a href="#blog">
+              <li className="cursor-pointer hover:text-[#c8e96d] transition">
+                Blog
+              </li>
+            </a>
           </ul>
 
           {/* Mobile Contact */}
-          <button className="mt-6 w-full bg-[#b9e45d] text-[#0a3f34] font-medium text-sm py-3 rounded-full">
-            Contact
-          </button>
+          <a href="#footer">
+            <button className="mt-6 w-full bg-[#b9e45d] text-[#0a3f34] font-medium text-sm py-3 rounded-full">
+              Contact
+            </button>
+          </a>
         </div>
       )}
     </header>

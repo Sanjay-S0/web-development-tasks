@@ -11,7 +11,7 @@ export default function GreenieFooter() {
         `}
       </style>
 
-      <footer className="w-full bg-gradient-to-b from-[#062b22] to-[#031f19] text-white px-4 sm:px-6 md:px-16 py-10 relative overflow-hidden">
+      <footer className="w-full bg-gradient-to-b from-[#062b22] to-[#031f19] text-white px-4 sm:px-6 md:px-16 py-10 relative overflow-hidden" id="footer">
         <div className="max-w-[1800px] mx-auto">
           
           {/* TOP GRID */}

@@ -23,7 +23,7 @@ export default function HousePlant() {
         `}
       </style>
 
-      <section className="w-full px-4 sm:px-6 md:px-10 lg:px-16 py-10 md:py-16 bg-white">
+      <section className="w-full px-4 sm:px-6 md:px-10 lg:px-16 py-10 md:py-16 bg-white" id="shop">
         <div className="max-w-[1800px] mx-auto">
           
           {/* TOP HEADER */}

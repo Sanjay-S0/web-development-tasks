@@ -55,7 +55,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 mt-8 md:mt-16">
               
               {/* Taking Care Button */}
-              <button
+              <a href="#care"
                 className="bg-[#ff6a00] hover:scale-105 transition-all duration-300 
                 text-white px-6 sm:px-8 md:px-10 py-3 md:py-4 
                 rounded-full flex items-center gap-3 md:gap-5 
@@ -65,25 +65,7 @@ export default function Hero() {
                 <Icon icon="mdi:watering-can-outline" width="28" />
                 <span className="opacity-70">|</span>
                 Taking Care
-              </button>
-
-              {/* Play Button */}
-              <div className="flex items-center gap-4 md:gap-5">
-                <button className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full border-2 border-white flex items-center justify-center hover:scale-110 transition duration-300">
-                  <Icon
-                    icon="mdi:play"
-                    width="24"
-                    className="text-white ml-1"
-                  />
-                </button>
-
-                <span
-                  className="text-white text-[14px] sm:text-[16px] md:text-[22px] leading-tight"
-                  style={{ fontFamily: "'Outfit', sans-serif" }}
-                >
-                  Show Plant <br /> Reels
-                </span>
-              </div>
+              </a>
             </div>
 
             {/* Decorative Splash */}

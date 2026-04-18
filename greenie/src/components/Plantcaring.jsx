@@ -13,7 +13,7 @@ export default function PlantCaringSection() {
         `}
       </style>
 
-      <section className="w-full bg-[#f7f7f5] px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-20 overflow-hidden">
+      <section className="w-full bg-[#f7f7f5] px-4 sm:px-8 md:px-12 lg:px-20 py-12 md:py-20 overflow-hidden" id="care">
         <h1
               className="text-[#062b22] text-[32px] sm:text-[42px] md:text-[50px] lg:text-[60px] leading-[0.95] tracking-tight font-medium md:hidden block text-center"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
@@ -45,13 +45,13 @@ export default function PlantCaringSection() {
             <div className="relative mt-10 md:mt-16 w-[200px] sm:w-[240px] md:w-[260px]">
               
               {/* Orange Circle */}
-              <div className="absolute -top-6 right-18 md:right-25 z-20 w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-[#ff6a00] flex items-center justify-center shadow-lg">
+              <a href="#shop" className="absolute -top-6 right-18 md:right-25 z-20 w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-[#ff6a00] flex items-center justify-center shadow-lg">
                 <Icon
                   icon="mdi:arrow-top-right"
                   className="text-white"
                   width="26"
                 />
-              </div>
+              </a>
 
               {/* Card */}
               <div className="bg-[#e8e5c9] rounded-[18px] md:rounded-[22px] p-4 md:p-6 h-[200px] md:h-[260px] flex flex-col items-center justify-center relative overflow-hidden">
